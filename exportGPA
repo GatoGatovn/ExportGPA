@@ -1,0 +1,35 @@
+let totalScore = 0;
+let totalCredits = 0;
+for (let i = 1; i <= 200; i++) {
+  let scoreXPath = `//*[@id="MarkDetail"]/div/div/table/tbody/tr[${i}]/td[6]`;
+  let scoreResult = document.evaluate(scoreXPath, document, null, XPathResult.ANY_TYPE, null);
+  let scoreNode = scoreResult.iterateNext();
+  if (scoreNode) {
+    let scoreValue = parseFloat(scoreNode.textContent);
+    if (scoreValue != 0.0 && scoreValue) {
+      let creditsXPath = `//*[@id="MarkDetail"]/div/div/table/tbody/tr[${i}]/td[4]`;
+      let creditsResult = document.evaluate(creditsXPath, document, null, XPathResult.ANY_TYPE, null);
+      let creditsNode = creditsResult.iterateNext();
+      if (creditsNode) {
+        let creditsValue = parseInt(creditsNode.textContent);
+        if (creditsValue != 1) {
+          totalCredits += creditsValue;
+          totalScore += scoreValue * creditsValue;
+        }
+      }
+    }
+  }
+}
+
+let averageScore = totalScore/totalCredits;
+let table = document.querySelector('table');
+let newRow = table.insertRow(-1);
+newRow.classList.add("MuiTableRow-root", "css-1du9sao-MuiTableRow-root");
+
+let newCell1 = newRow.insertCell(0);
+newCell1.colSpan = 4;
+newCell1.textContent = "Tổng số tín chỉ: " + totalCredits;
+
+let newCell2 = newRow.insertCell(1);
+newCell2.colSpan = 3;
+newCell2.textContent = "Điểm trung bình học tập: " + averageScore.toFixed(4);
