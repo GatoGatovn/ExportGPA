@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Tạo GPA
+// @name         Tạo GPAAAAAAA
 // @namespace    https://congdaotao.tmu.edu.vn/student
 // @version      4
 // @description  tạo GPA cho TMUer
