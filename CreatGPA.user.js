@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Tạo GPAAAAAAA
 // @namespace    https://congdaotao.tmu.edu.vn/student
-// @version      4
+// @version      5
 // @description  tạo GPA cho TMUer
 // @author       TMUer
 // @match        https://congdaotao.tmu.edu.vn/student/marks
