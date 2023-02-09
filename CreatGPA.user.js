@@ -6,6 +6,8 @@
 // @author       TMUer
 // @match        https://congdaotao.tmu.edu.vn/student/marks
 // @grant        none
+// @updateURL    https://github.com/GatoGatovn/exportGPA/raw/main/CreatGPA.user.js
+// @downloadURL  https://github.com/GatoGatovn/exportGPA/raw/main/CreatGPA.user.js
 // ==/UserScript==
 
   function addscore() {
