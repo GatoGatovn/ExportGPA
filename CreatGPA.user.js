@@ -37,4 +37,4 @@ let newCell2 = newRow.insertCell(1);
 newCell2.colSpan = 3;
 newCell2.textContent = "Điểm trung bình học tập: " + averageScore.toFixed(4);
 }
-setTimeout(addscore, 2000);
+setTimeout(addscore, 3000);
