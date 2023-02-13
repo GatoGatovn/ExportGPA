@@ -1,26 +1,10 @@
 // ==UserScript==
 // @name         AddGPA
-// @namespace    https://congdaotao.tmu.edu.vn/student
+// @namespace    https://congdaotao.tmu.edu.vn
 // @version      4
 // @description  :)
 // @author       TMUer Học dốt nên chưa có ny T.T
-// @match        https://congdaotao.tmu.edu.vn/login
-// @match        https://congdaotao.tmu.edu.vn/student
-// @match        https://congdaotao.tmu.edu.vn/student/info
-// @match        https://congdaotao.tmu.edu.vn/student/index
-// @match        https://congdaotao.tmu.edu.vn/student/studyprograms
-// @match        https://congdaotao.tmu.edu.vn/student/schedules
-// @match        https://congdaotao.tmu.edu.vn/student/exam
-// @match        https://congdaotao.tmu.edu.vn/student/decisions
-// @match        https://congdaotao.tmu.edu.vn/student/xemdiemrenluyen
-// @match        https://congdaotao.tmu.edu.vn/student/marks
-// @match        https://congdaotao.tmu.edu.vn/student/accountfees
-// @match        https://congdaotao.tmu.edu.vn/student/ketquadangky
-// @match        https://congdaotao.tmu.edu.vn/student/miengiam
-// @match        https://congdaotao.tmu.edu.vn/student/hocphantuongduong
-// @match        https://congdaotao.tmu.edu.vn/student/graduation
-// @match        https://congdaotao.tmu.edu.vn/student/hoctructuyen
-// @match        https://congdaotao.tmu.edu.vn/student/registconfirm
+// @match        https://congdaotao.tmu.edu.vn/*
 // @grant        none
 // @license      MIT
 // @updateURL    https://github.com/GatoGatovn/ExportGPA/raw/main/AddGPA.user.js
@@ -85,8 +69,3 @@ setInterval(function() {
       runCheckCalled = false;
 }
 }, 200);
-
-
-
-
-
