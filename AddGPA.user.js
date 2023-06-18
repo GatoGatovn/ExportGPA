@@ -51,21 +51,21 @@ function addscore() {
 
     let newCell3 = newRow3.insertCell(0);
     newCell3.colSpan = 7;
-    newCell3.textContent = "Số tín chỉ tối thiểu đạt A (GPA >= 3.2): " + minimumCreditsForGPA32.toFixed(2);
+    newCell3.textContent = "Số tín chỉ A cần đạt được để GPA >= 3.2: " + minimumCreditsForGPA32.toFixed(0);
 
     let newRow4 = table.insertRow(-1);
     newRow4.classList.add("MuiTableRow-root", "css-1du9sao-MuiTableRow-root");
 
     let newCell4 = newRow4.insertCell(0);
     newCell4.colSpan = 7;
-    newCell4.textContent = "Số tín chỉ tối thiểu đạt A (GPA >= 3.6): " + minimumCreditsForGPA36.toFixed(2);
+    newCell4.textContent = "Số tín chỉ A cần đạt được để GPA >= 3.6: " + minimumCreditsForGPA36.toFixed(0);
   } else if (averageScore >= 3.2 && averageScore < 3.6) {
     let newRow3 = table.insertRow(-1);
     newRow3.classList.add("MuiTableRow-root", "css-1du9sao-MuiTableRow-root");
 
     let newCell3 = newRow3.insertCell(0);
     newCell3.colSpan = 7;
-    newCell3.textContent = "Số tín chỉ tối thiểu đạt A (GPA >= 3.6): " + minimumCreditsForGPA36.toFixed(2);
+    newCell3.textContent = "Số tín chỉ A cần đạt được để GPA >= 3.6: " + minimumCreditsForGPA36.toFixed(0);
   }
 
   let newRow5 = table.insertRow(-1);
