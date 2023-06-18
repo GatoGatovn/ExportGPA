@@ -76,25 +76,32 @@ function addscore() {
   newCell5.textContent = "Made by TMUer Học dốt T.T";
 }
 
+let initialLoad = true;
 
-function Run() {
-  let intervalId = setInterval(function() {
-    let table = document.querySelector('table');
-    if (table) {
-      addscore();
-      clearInterval(intervalId);
-    }
-  }, 200);
-}
-
-let runCheckCalled = false;
-setInterval(function() {
+function run() {
   if (window.location.href === "https://congdaotao.tmu.edu.vn/student/marks") {
-    if (!runCheckCalled) {
-      Run();
-      runCheckCalled = true;
+    const rows = document.querySelectorAll("tr");
+    const lastRow = rows[rows.length - 1];
+
+    if (!lastRow.textContent.includes("Made by TMUer Học dốt T.T")) {
+      addscore();
+      initialLoad = false;
     }
-  } else {
-      runCheckCalled = false;
+  }
 }
-}, 200);
+
+function checkPageReload() {
+  window.addEventListener("beforeunload", function() {
+    initialLoad = true;
+  });
+
+  window.addEventListener("load", function() {
+    if (!initialLoad) {
+      console.log("Page reloaded");
+      run();
+    }
+  });
+}
+
+checkPageReload();
+setInterval(run, 200);
