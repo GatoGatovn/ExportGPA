@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AddGPA
 // @namespace    https://congdaotao.tmu.edu.vn
-// @version      4
+// @version      4.5
 // @description  :)
 // @author       TMUer Học dốt nên chưa có ny T.T
 // @match        https://congdaotao.tmu.edu.vn/*
